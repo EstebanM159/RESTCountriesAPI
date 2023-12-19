@@ -9,7 +9,7 @@ import { CountryDetailComponent } from './components/country-detail/country-deta
 import { SearchComponent } from './components/search/search.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { HomeComponent } from './home/home.component';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +23,8 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

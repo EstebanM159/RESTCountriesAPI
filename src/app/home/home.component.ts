@@ -5,5 +5,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
+  nameContinente:string ="";
+  namePais:string ="";
+  asignarHome(e: string){
+    this.nameContinente = e;
+  }
+  mostrar(value:any){
+    this.namePais = value
+  }
 }

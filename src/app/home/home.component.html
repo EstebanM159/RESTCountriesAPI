@@ -1,7 +1,10 @@
 <header class="px-2 py-3 px-md-4 d-flex justify-content-between align-items-center " style="background-color: #fff;">
-<h3 class="m-0">Where in the world?</h3>
-<a class="btn text-center d-flex align-items-center gap-2"><img class="h-100" src="../../assets/moon.svg" alt=""> Dark Mode</a>
+  <h3 class="m-0">Where in the world?</h3>
+  <a class="btn text-center d-flex align-items-center gap-2"><img class="h-100" src="../../assets/moon.svg" alt=""> Dark Mode</a>
 </header>
-  <app-search></app-search>
-  <app-country-list></app-country-list>
+<div class="container d-md-flex align-items-center justify-content-between">
+  <app-search (searchValue)="mostrar($event)"></app-search>
+  <app-filter (nameRequest)="asignarHome($event)"></app-filter>
+</div>
+  <app-country-list [paisBuscado]="namePais" [continente]="nameContinente"></app-country-list>
   <router-outlet></router-outlet>

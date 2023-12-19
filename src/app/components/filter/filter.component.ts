@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filter',
@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./filter.component.css']
 })
 export class FilterComponent{
-
+  @Output() nameRequest: EventEmitter<string> = new EventEmitter()
+  mostrar(id:string){
+    this.nameRequest.emit(id);
+  }
 }
