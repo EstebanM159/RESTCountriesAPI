@@ -28,7 +28,6 @@ export class CountryListComponent implements OnInit, OnChanges{
     }
     // Aca filtro por continente
     if(changes['continente'] && changes['continente'].currentValue !== undefined && changes['continente'].currentValue !== ""){
-      console.log(changes['continente'].currentValue)
       this.countryService.getByContinent(changes['continente'].currentValue).subscribe(result=>{
         this.countrys = result
       })
@@ -39,7 +38,6 @@ export class CountryListComponent implements OnInit, OnChanges{
   traer(){
     this.countryService.getAll().subscribe(result=>{
       this.countrys = result
-      console.log(this.countrys)
       // lazyloading/paginador algo para no cargar todo de una
     })
   }

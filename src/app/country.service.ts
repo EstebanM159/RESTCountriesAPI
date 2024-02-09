@@ -18,4 +18,5 @@ export class CountryService {
   getByName(q:string){
     return this.http.get<countryClass[]>(`https://restcountries.com/v3.1/name/${q}`)
   }
+  
 }
